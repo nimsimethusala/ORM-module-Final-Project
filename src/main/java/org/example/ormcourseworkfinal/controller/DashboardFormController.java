@@ -30,6 +30,11 @@ public class DashboardFormController {
     }
 
     @FXML
+    void btnSetting(ActionEvent event) {
+
+    }
+
+    @FXML
     void btnStudent(ActionEvent event) {
 
     }

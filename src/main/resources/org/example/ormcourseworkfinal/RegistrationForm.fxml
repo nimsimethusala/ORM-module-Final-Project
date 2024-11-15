@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootRegistrationForm" prefHeight="665.0" prefWidth="876.0" style="-fx-background-color: #f7daf0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ormcourseworkfinal.controller.RegistrationFormController">
+   <children>
+      <Text layoutX="276.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATION FORM">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="597.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="597.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="326.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="396.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="31.0" prefWidth="142.0" text="Register">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtUpfrontPayment" layoutX="50.0" layoutY="328.0" prefHeight="26.0" prefWidth="226.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="50.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upfront Payment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="324.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblRegistration" layoutX="51.0" layoutY="414.0" prefHeight="200.0" prefWidth="772.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="129.60002899169922" text="Student ID" />
+          <TableColumn fx:id="colStudentName" prefWidth="170.39996337890625" text="Student Name" />
+            <TableColumn fx:id="colCourseId" prefWidth="126.40005493164062" text="Course ID" />
+            <TableColumn fx:id="colCourseName" prefWidth="185.5999755859375" text="Course Name" />
+            <TableColumn fx:id="colUpfrontPayment" prefWidth="160.79998779296875" text="Upfront Payment" />
+        </columns>
+      </TableView>
+      <Button layoutX="593.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="142.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbStudentId" layoutX="597.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <ComboBox fx:id="cmbCourseId" layoutX="322.0" layoutY="236.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="lblRegistrationId" layoutX="51.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="lblDate" layoutX="322.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="lblStudentName" layoutX="51.0" layoutY="239.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="lblCourseName" layoutX="597.0" layoutY="239.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</AnchorPane>

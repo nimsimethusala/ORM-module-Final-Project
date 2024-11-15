@@ -1,10 +1,16 @@
 module org.example.ormcourseworkfinal {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.hibernate.orm.core;
+    requires static lombok;
+    requires jakarta.persistence;
+    requires java.naming;
 
 
-    opens org.example.ormcourseworkfinal to javafx.fxml;
-    exports org.example.ormcourseworkfinal;
-    exports org.example.ormcourseworkfinal.controller;
+    //exports org.example.ormcourseworkfinal.controller;
+    opens org.example.ormcourseworkfinal.entity to org.hibernate.orm.core;
+    opens org.example.ormcourseworkfinal.tm to javafx.base;
     opens org.example.ormcourseworkfinal.controller to javafx.fxml;
+
+    exports org.example.ormcourseworkfinal;
 }
