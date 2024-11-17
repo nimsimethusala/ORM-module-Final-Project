@@ -44,4 +44,28 @@ public class StudentBoImpl implements StudentBO {
     public String generateNextStudentId() {
         return studentDAO.generateNextId();
     }
+
+    @Override
+    public StudentDTO getStudentDetail(String studentId) {
+        Student student = studentDAO.getStudentDetail(studentId);
+        StudentDTO studentDTO = new StudentDTO(student.getStudentId(), student.getName(), student.getContact(), student.getAddress(), student.getEmail());
+        return studentDTO;
+    }
+
+    @Override
+    public List<StudentDTO> getAllStudent() {
+        ArrayList<StudentDTO> studentDTOS = new ArrayList<>();
+        ArrayList<Student> students = studentDAO.getAll();
+
+        for (Student student : students) {
+            StudentDTO studentDTO = new StudentDTO(student.getStudentId(), student.getName(), student.getContact(), student.getAddress(), student.getEmail());
+            studentDTOS.add(studentDTO);
+        }
+        return studentDTOS;
+    }
+
+    @Override
+    public String studentName(String studentId) {
+        return studentDAO.studentName(studentId);
+    }
 }

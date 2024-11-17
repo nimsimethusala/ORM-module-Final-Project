@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CourseDaoImpl implements CourseDAO {
     @Override
@@ -89,5 +90,45 @@ public class CourseDaoImpl implements CourseDAO {
             }
         }
         return "CA1001";
+    }
+
+    @Override
+    public Course getCourseDetail(String CourseId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Course WHERE CourseId = :CourseId");
+        query.setParameter("CourseId", CourseId);
+
+        List<Course> courses = query.list();
+
+        for (Course course : courses) {
+            String courseId = course.getCourseId();
+            String courseName = course.getCourseName();
+            String duration = course.getDuration();
+            double programFee = course.getProgramFee();
+
+            Course course1 = new Course(courseId, courseName, duration, programFee);
+            return course1;
+        }
+
+        transaction.commit();
+        session.close();
+        return null;
+    }
+
+    @Override
+    public String courseName(String courseId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT CourseName from Course where CourseId = :courseId");
+        query.setParameter("courseId", courseId);
+        String courseName = (String) query.uniqueResult();
+
+        transaction.commit();
+        session.close();
+
+        return courseName;
     }
 }

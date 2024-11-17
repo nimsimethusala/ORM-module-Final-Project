@@ -76,8 +76,8 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ComboBox fx:id="cmbStudentId" layoutX="597.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
-      <ComboBox fx:id="cmbCourseId" layoutX="322.0" layoutY="236.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <ComboBox fx:id="cmbStudentId" layoutX="597.0" layoutY="154.0" onAction="#cmbStudentIdOnAction" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
+      <ComboBox fx:id="cmbCourseId" layoutX="322.0" layoutY="236.0" onAction="#cmdCourseIdOnAction" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
       <Label fx:id="lblRegistrationId" layoutX="51.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
       <Label fx:id="lblDate" layoutX="322.0" layoutY="154.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />
       <Label fx:id="lblStudentName" layoutX="51.0" layoutY="239.0" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #ffffff;" />

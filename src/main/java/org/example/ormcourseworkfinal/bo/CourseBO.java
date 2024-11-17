@@ -15,4 +15,8 @@ public interface CourseBO extends SuperBO {
     List<CourseDTO> getAllCourse();
 
     String generateNextCourseId();
+
+    CourseDTO getCourseDetail(String courseId);
+
+    String courseName(String courseId);
 }

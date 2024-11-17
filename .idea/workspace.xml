@@ -4,54 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/BOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/CourseBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/PaymentBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/SuperBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/CourseBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/PaymentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/config/FactoryConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/RegistrationFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CourseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CrudDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/PaymentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/RegistrationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/SuperDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/CourseDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/CourseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/PaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/RegistrationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/StudentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Registration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/tm/CourseTm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/tm/RegistrationTm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/tm/StudentTm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/RegistrationForm.fxml" afterDir="false" />
+    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="student and course classes are fully implemented">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/PaymentFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/CourseFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/CourseFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/DashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/CourseBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/CourseBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/CourseBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/CourseBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/RegistrationFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/CourseForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/CourseForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/DashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/DashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/CourseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/CourseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/StudentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/PaymentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/PaymentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/RegistrationForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/RegistrationForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/StudentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/StudentForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -87,34 +65,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.MainApplication.executor": "Run",
-    "Maven.ORM-Course-Work-Final [clean].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final/src/main/java/org/example/ormcourseworkfinal",
-    "last_opened_file_path": "C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ORM-Course-Work-Final [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final/src/main/java/org/example/ormcourseworkfinal&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Documents\ORM\ORM-Course-Work-Final\src\main\resources" />
@@ -188,12 +166,29 @@
       <workItem from="1730764781721" duration="134000" />
       <workItem from="1730764925186" duration="23920000" />
       <workItem from="1731068903293" duration="7495000" />
-      <workItem from="1731391373739" duration="32320000" />
+      <workItem from="1731391373739" duration="41080000" />
+      <workItem from="1731657583155" duration="605000" />
+      <workItem from="1731658383332" duration="6501000" />
+      <workItem from="1731669273638" duration="6038000" />
+      <workItem from="1731726428586" duration="14555000" />
     </task>
+    <task id="LOCAL-00001" summary="student and course classes are fully implemented">
+      <option name="closed" value="true" />
+      <created>1731642910346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731642910346</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="student and course classes are fully implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="student and course classes are fully implemented" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

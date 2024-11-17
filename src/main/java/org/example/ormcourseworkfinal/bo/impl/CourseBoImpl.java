@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseBoImpl implements CourseBO {
-
     CourseDAO courseDAO = (CourseDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.COURSE);
 
     @Override
@@ -48,5 +47,17 @@ public class CourseBoImpl implements CourseBO {
     @Override
     public String generateNextCourseId() {
         return courseDAO.generateNextId();
+    }
+
+    @Override
+    public CourseDTO getCourseDetail(String courseId) {
+        Course course = courseDAO.getCourseDetail(courseId);
+        CourseDTO courseDTO = new CourseDTO(course.getCourseId(), course.getCourseName(), course.getDuration(), course.getProgramFee());
+        return courseDTO;
+    }
+
+    @Override
+    public String courseName(String courseId) {
+        return courseDAO.courseName(courseId);
     }
 }

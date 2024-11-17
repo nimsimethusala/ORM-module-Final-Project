@@ -21,7 +21,7 @@ public class Course {
     private String Duration;
     private double programFee;
 
-    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Registration> registrations;
 
     public Course(String CourseId, String CourseName, String Duration, double programFee) {

@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.StudentBO;
@@ -119,6 +120,10 @@ public class StudentFormController {
         StudentDTO studentDTO = new StudentDTO(studentId, studentName, contact, address, email);
 
         boolean isUpdated = studentBO.updateStudent(studentDTO);
+
+        if (isUpdated) {
+            new Alert(Alert.AlertType.INFORMATION, "Student is Updated...!").show();
+        }
     }
 
     private void clearFields() {
@@ -157,4 +162,16 @@ public class StudentFormController {
         System.out.println(nextId);
         lblStudentId.setText(nextId);
     }
+
+    public void tblStudentOnAction(MouseEvent mouseEvent) {
+        int index = tblStudent.getSelectionModel().getSelectedIndex();
+        StudentTm studentTm = tblStudent.getItems().get(index);
+
+        lblStudentId.setText(studentTm.getStudentId());
+        txtName.setText(studentTm.getName());
+        txtContact.setText(String.valueOf(studentTm.getContact()));
+        txtAddress.setText(studentTm.getAddress());
+        txtEmail.setText(studentTm.getEmail());
+    }
+
 }

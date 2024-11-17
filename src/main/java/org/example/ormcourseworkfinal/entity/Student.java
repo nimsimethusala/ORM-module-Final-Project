@@ -22,7 +22,7 @@ public class Student {
     private String address;
     private String email;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Registration> registrations;
 
     public Student(String studentId, String name, int contact, String address, String email) {

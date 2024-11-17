@@ -5,23 +5,30 @@ import org.example.ormcourseworkfinal.dao.RegistrationDAO;
 import org.example.ormcourseworkfinal.entity.Course;
 import org.example.ormcourseworkfinal.entity.Registration;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 
 public class RegistrationDaoImpl implements RegistrationDAO {
     @Override
-    public boolean save(Registration student) {
+    public boolean save(Registration registration) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.save(registration);
+        transaction.commit();
+        session.close();
+        return true;
+    }
+
+    @Override
+    public boolean update(Registration registration) {
         return false;
     }
 
     @Override
-    public boolean update(Registration student) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(String studentId) {
+    public boolean delete(String regId) {
         return false;
     }
 

@@ -5,6 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
 
+import java.util.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,6 +17,8 @@ public class Payment {
     @Id
     private String paymentId;
     private double amount;
+    private double balance;
+    private Date date;
     private String status;
 
     @ManyToOne

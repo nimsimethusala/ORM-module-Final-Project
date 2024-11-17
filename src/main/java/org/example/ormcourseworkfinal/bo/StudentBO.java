@@ -14,4 +14,10 @@ public interface StudentBO extends SuperBO{
     List<StudentDTO> getAllStudents();
 
     String generateNextStudentId();
+
+    StudentDTO getStudentDetail(String studentId);
+
+    Object getAllStudent();
+
+    String studentName(String studentId);
 }
