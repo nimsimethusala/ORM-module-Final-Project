@@ -4,6 +4,7 @@ import org.example.ormcourseworkfinal.config.FactoryConfiguration;
 import org.example.ormcourseworkfinal.dao.RegistrationDAO;
 import org.example.ormcourseworkfinal.entity.Course;
 import org.example.ormcourseworkfinal.entity.Registration;
+import org.example.ormcourseworkfinal.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -34,14 +35,22 @@ public class RegistrationDaoImpl implements RegistrationDAO {
 
     @Override
     public ArrayList<Registration> getAll() {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Registration");
+        ArrayList<Registration> registrations = (ArrayList<Registration>) query.list();
+
+        transaction.commit();
+        session.close();
+        return registrations;
     }
 
     @Override
     public String generateNextId() {
         Session session = FactoryConfiguration.getInstance().getSession();
 
-        Query query = session.createQuery("SELECT registrationId FROM Registration ");
+        Query query = session.createQuery("SELECT registrationId FROM Registration ORDER BY registrationId DESC LIMIT 1");
         String registrationId = (String) query.uniqueResult();
         session.close();
         return splitStudentId(registrationId);

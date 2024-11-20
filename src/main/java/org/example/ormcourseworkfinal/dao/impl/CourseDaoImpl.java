@@ -65,7 +65,7 @@ public class CourseDaoImpl implements CourseDAO {
     public String generateNextId() {
         Session session = FactoryConfiguration.getInstance().getSession();
 
-        Query query = session.createQuery("SELECT CourseId FROM Course");
+        Query query = session.createQuery("SELECT CourseId FROM Course ORDER BY CourseId DESC LIMIT 1");
         String courseId = (String) query.uniqueResult();
         System.out.println(courseId);
         session.close();

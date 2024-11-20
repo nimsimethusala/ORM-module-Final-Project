@@ -17,11 +17,13 @@ import org.example.ormcourseworkfinal.dto.StudentDTO;
 import org.example.ormcourseworkfinal.entity.Course;
 import org.example.ormcourseworkfinal.entity.Student;
 import org.example.ormcourseworkfinal.tm.RegistrationTm;
+import org.example.ormcourseworkfinal.tm.StudentTm;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class RegistrationFormController {
 
@@ -78,10 +80,11 @@ public class RegistrationFormController {
         lblDate.setText(formattedDate);
 
         generateNextRegistrationId();
-        setCellValueFactory();
-        loadAllCustomer();
         getAllStudentId();
         getAllCourseId();
+        setCellValueFactory();
+        loadAllRegistration();
+
     }
 
     private void getAllCourseId() {
@@ -137,38 +140,24 @@ public class RegistrationFormController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Registration is Successfully completed...!").show();
             }
         } catch (ParseException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
 
-    private void loadAllCustomer(){
-        String studentId = (String) cmbStudentId.getValue();
-        String studentName = lblStudentName.getText();
-        String courseId = (String) cmbCourseId.getValue();
-        String courseName = lblCourseName.getText();
-
-        double upfrontPayment = 0.0;
-        if (txtUpfrontPayment.getText() != null && !txtUpfrontPayment.getText().trim().isEmpty()) {
-            try {
-                upfrontPayment = Double.parseDouble(txtUpfrontPayment.getText().trim());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid upfront payment value: " + txtUpfrontPayment.getText());
-                return;
-            }
-        } else {
-            System.out.println("Upfront payment field is empty!");
-            return;
-        }
-
+    private void loadAllRegistration(){
         ObservableList<RegistrationTm> obList = FXCollections.observableArrayList();
 
         try {
-            RegistrationTm registrationTm = new RegistrationTm(studentId, studentName, courseId, courseName, upfrontPayment);
-            obList.add(registrationTm);
-
+            List<RegistrationDTO> registrationDTOS = registrationBO.getAllRegistrations();
+            for (RegistrationDTO registration : registrationDTOS){
+                RegistrationTm registrationTm = new RegistrationTm(registration.getStudent().getStudentId(), registration.getStudent().getName(), registration.getCourse().getCourseId(), registration.getCourse().getCourseName(), registration.getUpfrontPayment());
+                obList.add(registrationTm);
+            }
             tblRegistration.setItems(obList);
 
         } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

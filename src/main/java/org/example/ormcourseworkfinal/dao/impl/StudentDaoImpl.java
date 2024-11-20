@@ -67,7 +67,7 @@ public class StudentDaoImpl implements StudentDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
 //        Transaction transaction = session.beginTransaction();
 
-        Query query = session.createQuery("SELECT studentId FROM Student");
+        Query query = session.createQuery("SELECT studentId FROM Student ORDER BY studentId DESC LIMIT 1");
         String studentId = (String) query.uniqueResult();
         System.out.println(studentId);
 //        transaction.commit();

@@ -4,33 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="student and course classes are fully implemented">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/PaymentFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="design the payment UI">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/CourseBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/CourseBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/CourseBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/CourseBoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/RegistrationFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/CourseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/PaymentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/CourseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/CourseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/PaymentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/PaymentDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/PaymentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/PaymentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/RegistrationForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/RegistrationForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/StudentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/StudentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +157,8 @@
       <workItem from="1731657583155" duration="605000" />
       <workItem from="1731658383332" duration="6501000" />
       <workItem from="1731669273638" duration="6038000" />
-      <workItem from="1731726428586" duration="14555000" />
+      <workItem from="1731726428586" duration="23224000" />
+      <workItem from="1731933397776" duration="16975000" />
     </task>
     <task id="LOCAL-00001" summary="student and course classes are fully implemented">
       <option name="closed" value="true" />
@@ -180,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731642910346</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="design the payment UI">
+      <option name="closed" value="true" />
+      <created>1731854123566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731854123566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +184,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="student and course classes are fully implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="student and course classes are fully implemented" />
+    <MESSAGE value="design the payment UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="design the payment UI" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
