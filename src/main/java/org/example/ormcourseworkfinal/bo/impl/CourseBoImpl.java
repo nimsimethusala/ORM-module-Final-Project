@@ -28,7 +28,7 @@ public class CourseBoImpl implements CourseBO {
 
     @Override
     public boolean updateCourse(CourseDTO courseDTO) {
-        return courseDAO.save(new Course(courseDTO.getCourseId(), courseDTO.getCourseName(), courseDTO.getDuration(), courseDTO.getProgramFee()));
+        return courseDAO.update(new Course(courseDTO.getCourseId(), courseDTO.getCourseName(), courseDTO.getDuration(), courseDTO.getProgramFee()));
     }
 
     @Override

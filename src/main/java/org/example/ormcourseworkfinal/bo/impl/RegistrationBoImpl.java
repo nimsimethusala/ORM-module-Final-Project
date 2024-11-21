@@ -35,11 +35,14 @@ public class RegistrationBoImpl implements RegistrationBO {
         if (isSaved) {
             double newBalance = paymentDAO.getBalance(registrationDTO.getUpfrontPayment(), 0.0, registrationDTO.getCourse().getProgramFee());
             String status = paymentDAO.getStatus(newBalance, registrationDTO.getCourse().getProgramFee());
-            Payment payment = new Payment(paymentDAO.generateNextId(), 0.0, newBalance, registrationDTO.getDate(), status);
+            Payment payment = new Payment(paymentDAO.generateNextId(), 0.0, newBalance, registrationDTO.getDate(), status, registration);
+            System.out.println("Payment" + payment);
             boolean isCompleted = paymentDAO.save(payment);
             transaction.commit();
-            new Alert(Alert.AlertType.CONFIRMATION, "Transaction Completed...!").show();
-            return true;
+            if (isCompleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Transaction Completed...!").show();
+                return true;
+            }
         }
         transaction.rollback();
         session.close();

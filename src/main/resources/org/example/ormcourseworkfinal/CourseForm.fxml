@@ -71,7 +71,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <TableView fx:id="tblProgram" layoutX="58.0" layoutY="317.0" prefHeight="274.0" prefWidth="954.0">
+      <TableView fx:id="tblProgram" layoutX="58.0" layoutY="317.0" onMouseClicked="#tblProgramOnAction" prefHeight="274.0" prefWidth="954.0">
         <columns>
           <TableColumn fx:id="colProgramId" prefWidth="172.00002670288086" text="Program ID" />
           <TableColumn fx:id="colProgramName" prefWidth="355.1999816894531" text="Name" />

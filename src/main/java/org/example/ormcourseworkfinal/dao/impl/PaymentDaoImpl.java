@@ -5,6 +5,7 @@ import org.example.ormcourseworkfinal.dao.PaymentDAO;
 import org.example.ormcourseworkfinal.entity.Payment;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 
@@ -37,7 +38,32 @@ public class PaymentDaoImpl implements PaymentDAO {
 
     @Override
     public String generateNextId() {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        Query query = session.createQuery("SELECT paymentId FROM Payment ORDER BY paymentId DESC LIMIT 1");
+        String payId = (String) query.uniqueResult();
+        session.close();
+        return splitRegistrationId(payId);
+    }
+
+    private String splitRegistrationId(String regId) {
+        if(regId != null) {
+            String[] strings = regId.split("P0");
+            int id = Integer.parseInt(strings[1]);
+            id++;
+            String ID = String.valueOf(id);
+            int length = ID.length();
+            if (length < 2){
+                return "P00"+id;
+            }else {
+                if (length < 3){
+                    return "P0"+id;
+                }else {
+                    return "P"+id;
+                }
+            }
+        }
+        return "P001";
     }
 
     @Override

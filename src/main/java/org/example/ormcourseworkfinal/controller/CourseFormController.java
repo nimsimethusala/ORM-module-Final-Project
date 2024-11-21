@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.CourseBO;
@@ -46,9 +47,6 @@ public class CourseFormController {
 
     @FXML
     private TextField txtProgramFee;
-
-    @FXML
-    private TextField txtProgramId;
 
     @FXML
     private TextField txtProgramName;
@@ -144,5 +142,15 @@ public class CourseFormController {
         String nextId = courseBO.generateNextCourseId();
         System.out.println("curse id : " + nextId);
         lblCourseId.setText(nextId);
+    }
+
+    public void tblProgramOnAction(MouseEvent mouseEvent) {
+        int index = tblProgram.getSelectionModel().getSelectedIndex();
+        CourseTm courseTm = tblProgram.getItems().get(index);
+
+        lblCourseId.setText(courseTm.getCourseId());
+        txtProgramName.setText(courseTm.getCourseName());
+        txtDuration.setText(courseTm.getDuration());
+        txtProgramFee.setText(String.valueOf(courseTm.getProgramFee()));
     }
 }
