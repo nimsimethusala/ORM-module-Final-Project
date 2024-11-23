@@ -8,6 +8,7 @@ import lombok.*;
 @Setter
 @ToString
 public class RegistrationTm {
+    private String registrationId;
     private String studentId;
     private String studentName;
     private String courseId;

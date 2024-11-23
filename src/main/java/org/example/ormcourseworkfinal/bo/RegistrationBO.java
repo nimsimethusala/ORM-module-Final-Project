@@ -2,6 +2,7 @@ package org.example.ormcourseworkfinal.bo;
 
 import org.example.ormcourseworkfinal.dto.RegistrationDTO;
 
+import java.util.Date;
 import java.util.List;
 
 public interface RegistrationBO extends SuperBO{

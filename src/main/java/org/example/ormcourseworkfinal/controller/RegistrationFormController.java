@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.CourseBO;
@@ -26,6 +27,8 @@ import java.util.Date;
 import java.util.List;
 
 public class RegistrationFormController {
+    @FXML
+    public TableColumn<?, ?> colRegistrationId;
 
     @FXML
     private ComboBox<String> cmbCourseId;
@@ -110,11 +113,6 @@ public class RegistrationFormController {
     }
 
     @FXML
-    void btnDeleteOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void btnRegisterOnAction(ActionEvent event) {
         String regId = lblRegistrationId.getText();
         String studentId = (String) cmbStudentId.getValue();
@@ -138,6 +136,7 @@ public class RegistrationFormController {
 
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Registration is Successfully completed...!").show();
+                clearFields();
             }
         } catch (ParseException e) {
             e.printStackTrace();
@@ -151,7 +150,7 @@ public class RegistrationFormController {
         try {
             List<RegistrationDTO> registrationDTOS = registrationBO.getAllRegistrations();
             for (RegistrationDTO registration : registrationDTOS){
-                RegistrationTm registrationTm = new RegistrationTm(registration.getStudent().getStudentId(), registration.getStudent().getName(), registration.getCourse().getCourseId(), registration.getCourse().getCourseName(), registration.getUpfrontPayment());
+                RegistrationTm registrationTm = new RegistrationTm(registration.getRegistrationId(), registration.getStudent().getStudentId(), registration.getStudent().getName(), registration.getCourse().getCourseId(), registration.getCourse().getCourseName(), registration.getUpfrontPayment());
                 obList.add(registrationTm);
             }
             tblRegistration.setItems(obList);
@@ -169,6 +168,7 @@ public class RegistrationFormController {
     }
 
     private void setCellValueFactory(){
+        colRegistrationId.setCellValueFactory(new PropertyValueFactory<>("registrationId"));
         colStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
         colStudentName.setCellValueFactory(new PropertyValueFactory<>("studentName"));
         colCourseId.setCellValueFactory(new PropertyValueFactory<>("courseId"));
@@ -196,5 +196,17 @@ public class RegistrationFormController {
 
         String courseName = courseBO.courseName(courseId);
         lblCourseName.setText(courseName);
+    }
+
+    @FXML
+    public void btnClearOnAction(ActionEvent actionEvent) {
+        clearFields();
+    }
+
+    private void clearFields() {
+        lblDate.setText("");
+        lblStudentName.setText("");
+        lblCourseName.setText("");
+        txtUpfrontPayment.setText("");
     }
 }

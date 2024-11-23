@@ -62,16 +62,17 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TableView fx:id="tblRegistration" layoutX="51.0" layoutY="414.0" prefHeight="200.0" prefWidth="772.0">
+      <TableView fx:id="tblRegistration" layoutX="35.0" layoutY="414.0" prefHeight="200.0" prefWidth="805.0">
         <columns>
-          <TableColumn fx:id="colStudentId" prefWidth="129.60002899169922" text="Student ID" />
-          <TableColumn fx:id="colStudentName" prefWidth="170.39996337890625" text="Student Name" />
-            <TableColumn fx:id="colCourseId" prefWidth="126.40005493164062" text="Course ID" />
-            <TableColumn fx:id="colCourseName" prefWidth="185.5999755859375" text="Course Name" />
-            <TableColumn fx:id="colUpfrontPayment" prefWidth="160.79998779296875" text="Upfront Payment" />
+          <TableColumn fx:id="colRegistrationId" prefWidth="95.20000457763672" text="Registration ID" />
+          <TableColumn fx:id="colStudentId" prefWidth="95.19998168945312" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="180.0" text="Student Name" />
+            <TableColumn fx:id="colCourseId" prefWidth="103.20001220703125" text="Course ID" />
+            <TableColumn fx:id="colCourseName" prefWidth="205.60000610351562" text="Course Name" />
+            <TableColumn fx:id="colUpfrontPayment" prefWidth="127.20001220703125" text="Upfront Payment" />
         </columns>
       </TableView>
-      <Button layoutX="593.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="142.0" text="Delete">
+      <Button layoutX="593.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="142.0" text="Clear">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
