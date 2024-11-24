@@ -20,4 +20,6 @@ public interface StudentBO extends SuperBO{
     Object getAllStudent();
 
     String studentName(String studentId);
+
+    String getStudentName(String studentId);
 }

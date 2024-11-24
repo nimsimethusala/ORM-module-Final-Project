@@ -76,4 +76,83 @@ public class RegistrationDaoImpl implements RegistrationDAO {
         }
         return "R001";
     }
+
+    @Override
+    public Registration getRegistrationDetail(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        try {
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("FROM Registration WHERE registrationId =: registrationId");
+            query.setParameter("registrationId", registrationId);
+
+            transaction.commit();
+            return (Registration) query.uniqueResult();
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public String getStudentId(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT student FROM Registration WHERE registrationId =: registrationId");
+        query.setParameter("registrationId", registrationId);
+
+        Student student = (Student) query.uniqueResult();
+        return student.getStudentId();
+    }
+
+    @Override
+    public String getProgramName(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT course from Registration where registrationId = :registrationId");
+        query.setParameter("registrationId", registrationId);
+        Course course = (Course) query.uniqueResult();
+
+        transaction.commit();
+        session.close();
+
+        return course.getCourseName();
+    }
+
+    @Override
+    public double getProgramFee(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT course from Registration where registrationId = :registrationId");
+        query.setParameter("registrationId", registrationId);
+        Course course = (Course) query.uniqueResult();
+
+        transaction.commit();
+        session.close();
+
+        return course.getProgramFee();
+    }
+
+    @Override
+    public double getUpfrontPayment(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+
+        try {
+            Transaction transaction = session.beginTransaction();
+
+            Query query = session.createQuery("SELECT upfrontPayment from Registration where registrationId = :registrationId");
+            query.setParameter("registrationId", registrationId);
+
+            transaction.commit();
+            return (double) query.uniqueResult();
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            session.close();
+        }
+    }
 }

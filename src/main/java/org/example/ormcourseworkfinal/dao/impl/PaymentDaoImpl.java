@@ -33,7 +33,15 @@ public class PaymentDaoImpl implements PaymentDAO {
 
     @Override
     public ArrayList<Payment> getAll() {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("FROM Payment ");
+        ArrayList<Payment> payments = (ArrayList<Payment>) query.list();
+
+        transaction.commit();
+        session.close();
+        return payments;
     }
 
     @Override
@@ -77,5 +85,29 @@ public class PaymentDaoImpl implements PaymentDAO {
             return "Completed";
         }
         return "Incomplete";
+    }
+
+    @Override
+    public double getPreviousInstallments(String registrationId) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT balance from Payment where registration.registrationId = :registrationId");
+        query.setParameter("registrationId", registrationId);
+        ArrayList<Double> balanceList = (ArrayList<Double>) query.list();
+
+        double Balance = 0;
+
+        for (double balance : balanceList) {
+            Balance += balance;
+        }
+        transaction.commit();
+        session.close();
+        return Balance;
+    }
+
+    @Override
+    public double getNewBalance(double balance, double amount) {
+        return balance - amount;
     }
 }

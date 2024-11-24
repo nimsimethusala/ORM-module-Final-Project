@@ -68,4 +68,9 @@ public class StudentBoImpl implements StudentBO {
     public String studentName(String studentId) {
         return studentDAO.studentName(studentId);
     }
+
+    @Override
+    public String getStudentName(String studentId) {
+        return studentDAO.studentName(studentId);
+    }
 }

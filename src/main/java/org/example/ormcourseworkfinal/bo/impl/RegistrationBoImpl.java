@@ -61,4 +61,30 @@ public class RegistrationBoImpl implements RegistrationBO {
         }
         return registrationDTOS;
     }
+
+    @Override
+    public RegistrationDTO getRegistrationDetail(String registrationId) {
+        Registration registration = registrationDAO.getRegistrationDetail(registrationId);
+        return new RegistrationDTO(registration.getRegistrationId(), registration.getDate(), registration.getUpfrontPayment(), registration.getStudent(), registration.getCourse());
+    }
+
+    @Override
+    public String getStudentId(String registrationId) {
+        return registrationDAO.getStudentId(registrationId);
+    }
+
+    @Override
+    public String getProgramName(String registrationId) {
+        return registrationDAO.getProgramName(registrationId);
+    }
+
+    @Override
+    public double getProgramFee(String registrationId) {
+        return registrationDAO.getProgramFee(registrationId);
+    }
+
+    @Override
+    public double getUpfrontPayment(String registrationId) {
+        return registrationDAO.getUpfrontPayment(registrationId);
+    }
 }

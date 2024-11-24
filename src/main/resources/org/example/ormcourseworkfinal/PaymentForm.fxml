@@ -32,7 +32,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <ComboBox fx:id="cmbRegistrationId" layoutX="782.0" layoutY="122.0" prefHeight="35.0" prefWidth="299.0" style="-fx-background-radius: 8px; -fx-background-color: #ffffff;" />
+      <ComboBox fx:id="cmbRegistrationId" layoutX="782.0" layoutY="122.0" onAction="#cmbRegistrationIdOnAction" prefHeight="35.0" prefWidth="299.0" style="-fx-background-radius: 8px; -fx-background-color: #ffffff;" />
       <Text layoutX="80.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -98,7 +98,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="lblPayment" layoutX="222.0" layoutY="411.0" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px;">
+      <TextField fx:id="txtPayment" layoutX="222.0" layoutY="411.0" onAction="#txtPaymentOnAction" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px;">
          <font>
             <Font size="18.0" />
          </font>
@@ -113,7 +113,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblPayment" layoutX="44.0" layoutY="506.0" onMouseClicked="#tblPaymentOnAction" prefHeight="242.0" prefWidth="1076.0">
+      <TableView fx:id="tblPayment" layoutX="44.0" layoutY="506.0" prefHeight="242.0" prefWidth="1076.0">
         <columns>
           <TableColumn fx:id="colRegistrationId" prefWidth="101.60000991821289" text="Registration ID" />
           <TableColumn fx:id="colStudentId" prefWidth="116.80000305175781" text="Student ID" />
@@ -123,7 +123,7 @@
             <TableColumn fx:id="colStatus" prefWidth="216.7999267578125" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="933.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="146.0" text="DELETE">
+      <Button layoutX="933.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="146.0" text="CLEAR">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

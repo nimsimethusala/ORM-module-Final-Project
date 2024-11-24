@@ -23,13 +23,4 @@ public class Payment {
 
     @ManyToOne
     private Registration registration;
-
-    /*public Payment(String paymentId, double amount, double balance, Date date, String status) {
-        this.paymentId = paymentId;
-        this.amount = amount;
-        this.balance = balance;
-        this.date = date;
-        this.status = status;
-
-    }*/
 }
