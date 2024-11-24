@@ -19,6 +19,8 @@ import org.example.ormcourseworkfinal.entity.Course;
 import org.example.ormcourseworkfinal.entity.Student;
 import org.example.ormcourseworkfinal.tm.RegistrationTm;
 import org.example.ormcourseworkfinal.tm.StudentTm;
+import org.example.ormcourseworkfinal.util.Regex;
+import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -208,5 +210,10 @@ public class RegistrationFormController {
         lblStudentName.setText("");
         lblCourseName.setText("");
         txtUpfrontPayment.setText("");
+    }
+
+    @FXML
+    public void txtUpfrontPaymentOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.PRICE,txtUpfrontPayment);
     }
 }

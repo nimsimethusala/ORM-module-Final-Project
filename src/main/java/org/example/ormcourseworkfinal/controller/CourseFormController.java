@@ -17,6 +17,8 @@ import org.example.ormcourseworkfinal.dto.StudentDTO;
 import org.example.ormcourseworkfinal.entity.Course;
 import org.example.ormcourseworkfinal.tm.CourseTm;
 import org.example.ormcourseworkfinal.tm.StudentTm;
+import org.example.ormcourseworkfinal.util.Regex;
+import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
 import java.util.List;
 
@@ -152,5 +154,15 @@ public class CourseFormController {
         txtProgramName.setText(courseTm.getCourseName());
         txtDuration.setText(courseTm.getDuration());
         txtProgramFee.setText(String.valueOf(courseTm.getProgramFee()));
+    }
+
+    @FXML
+    public void txtProgramNameOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.NAME,txtProgramName);
+    }
+
+    @FXML
+    public void txtProgramFeeOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.PRICE,txtProgramFee);
     }
 }

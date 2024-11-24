@@ -13,6 +13,8 @@ import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.StudentBO;
 import org.example.ormcourseworkfinal.dto.StudentDTO;
 import org.example.ormcourseworkfinal.tm.StudentTm;
+import org.example.ormcourseworkfinal.util.Regex;
+import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -174,4 +176,18 @@ public class StudentFormController {
         txtEmail.setText(studentTm.getEmail());
     }
 
+    @FXML
+    public void txtNameOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.NAME,txtName);
+    }
+
+    @FXML
+    public void txtEmailOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.EMAIL,txtEmail);
+    }
+
+    @FXML
+    public void txtContactOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.CONTACT,txtContact);
+    }
 }

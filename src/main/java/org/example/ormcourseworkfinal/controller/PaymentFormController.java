@@ -15,6 +15,8 @@ import org.example.ormcourseworkfinal.dto.PaymentDTO;
 import org.example.ormcourseworkfinal.dto.RegistrationDTO;
 import org.example.ormcourseworkfinal.entity.Registration;
 import org.example.ormcourseworkfinal.tm.PaymentTm;
+import org.example.ormcourseworkfinal.util.Regex;
+import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -233,6 +235,11 @@ public class PaymentFormController {
 
     @FXML
     public void txtPaymentOnAction(ActionEvent actionEvent) {
+        Regex.setTextColor(TextFeildRegex.PRICE,txtPayment);
+        calculateNewBalance();
+    }
+
+    private void calculateNewBalance() {
         double balance = Double.parseDouble(lblBalance.getText());
         double amount = Double.parseDouble(txtPayment.getText());
 
