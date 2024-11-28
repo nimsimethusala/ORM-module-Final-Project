@@ -7,25 +7,25 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1071.0" style="-fx-background-color: #fffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ormcourseworkfinal.controller.UserDashboardFormController">
+<AnchorPane fx:id="rootDashboard" prefHeight="700.0" prefWidth="1071.0" style="-fx-background-color: #fffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ormcourseworkfinal.controller.UserDashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f57398" height="65.0" stroke="#f57398" strokeType="INSIDE" width="1074.0" />
-      <Button layoutX="427.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnStudent" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Student" textFill="WHITE">
+      <Button layoutX="486.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnStudent" prefHeight="43.0" prefWidth="178.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Student" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="103.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnDashboard" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Dashboard" textFill="WHITE">
+      <Button layoutX="97.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnDashboard" prefHeight="43.0" prefWidth="178.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Dashboard" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="749.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnCourse" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Course" textFill="WHITE">
+      <Button layoutX="878.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnCourse" prefHeight="43.0" prefWidth="178.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Course" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="265.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnRegistration" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Registration" textFill="WHITE">
+      <Button layoutX="291.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnRegistration" prefHeight="43.0" prefWidth="178.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Registration" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -35,21 +35,18 @@
             <Image url="@../../../images/A_woman_holding_a_tray_of_food_with_a_chefs_hat_on_it___Premium_AI-generated_vector-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button layoutX="588.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnPayment" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Payment" textFill="WHITE">
+      <Button layoutX="682.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnPayment" prefHeight="43.0" prefWidth="178.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Payment" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <AnchorPane fx:id="rootMain" layoutX="3.0" layoutY="65.0" prefHeight="634.0" prefWidth="1071.0" style="-fx-background-color: #ffffff;" />
-      <ImageView fitHeight="632.0" fitWidth="616.0" layoutX="232.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/A_woman_holding_a_tray_of_food_with_a_chefs_hat_on_it___Premium_AI-generated_vector-removebg-preview.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="911.0" layoutY="11.0" mnemonicParsing="false" onAction="#btnSetting" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Setting" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Button>
+      <AnchorPane fx:id="rootMain" layoutX="3.0" layoutY="65.0" prefHeight="634.0" prefWidth="1071.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="632.0" fitWidth="616.0" layoutX="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/A_woman_holding_a_tray_of_food_with_a_chefs_hat_on_it___Premium_AI-generated_vector-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

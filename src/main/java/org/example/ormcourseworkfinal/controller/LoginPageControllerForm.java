@@ -3,12 +3,15 @@ package org.example.ormcourseworkfinal.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import org.example.ormcourseworkfinal.MainApplication;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.UserBO;
 import org.example.ormcourseworkfinal.dto.UserDTO;
@@ -36,19 +39,30 @@ public class LoginPageControllerForm {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
 
-        boolean isCorrect = checkCredencials(username, password);
+//        boolean isCorrect = checkCredencials(username, password);
 
+        boolean isMatch = userBO.checkUsername(username);
 
-            try {
-                if (isCorrect) {
-                    AnchorPane login = FXMLLoader.load(this.getClass().getResource("/view/user_form.fxml"));
-
-//                    rootLogin.getChildren().clear();
-//                    rootLogin.getChildren().add(login);
+        try {
+//            if (isCorrect) {
+                if (isMatch) {
+                    FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("Hello!");
+                    stage.setScene(scene);
+                    stage.show();
+                }else {
+                    FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("Hello!");
+                    stage.setScene(scene);
+                    stage.show();
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+//            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
