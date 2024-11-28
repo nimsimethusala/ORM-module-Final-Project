@@ -3,16 +3,17 @@ package org.example.ormcourseworkfinal;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MainApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+    public void start(Stage primaryStage) throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/org/example/ormcourseworkfinal/LoginPage.fxml")); // login page eke idn load wela enn on nm meka ain kranna
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
     }

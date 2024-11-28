@@ -24,7 +24,7 @@ public class LoginPageControllerForm {
 
     public PasswordField txtPassword;
     @FXML
-    private ImageView rootLogin;
+    private AnchorPane rootLogin;
 
     @FXML
     private TextField txtPwd;
@@ -38,14 +38,12 @@ public class LoginPageControllerForm {
     void btnLoginOnAction(ActionEvent event) {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
-
-//        boolean isCorrect = checkCredencials(username, password);
-
+        ArrayList<String> hashPasswords = userBO.getHashPassword(username);
         boolean isMatch = userBO.checkUsername(username);
 
         try {
-//            if (isCorrect) {
-                if (isMatch) {
+            if (username.equals("Admin")) {
+                if (checkPassword(password,hashPasswords)) {
                     FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
@@ -53,17 +51,32 @@ public class LoginPageControllerForm {
                     stage.setScene(scene);
                     stage.show();
                 }else {
-                    FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setTitle("Hello!");
-                    stage.setScene(scene);
-                    stage.show();
+                    new Alert(Alert.AlertType.INFORMATION, "Password is incorrect...!").show();
                 }
-//            }
+
+            }else {
+                if (isMatch){
+                    if (checkPassword(password,hashPasswords)) {
+                        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
+                        Scene scene = new Scene(fxmlLoader.load());
+                        Stage stage = new Stage();
+                        stage.setTitle("Hello!");
+                        stage.setScene(scene);
+                        stage.show();
+                    }else {
+                        new Alert(Alert.AlertType.INFORMATION, "Password is incorrect...!").show();
+                    }
+                }else {
+                    new Alert(Alert.AlertType.INFORMATION, "Username is incorrect...!").show();
+                }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private boolean checkPassword(String password, ArrayList<String> hashPasswords) {
+        return CheckCredential.checkPassword(password, hashPasswords);
     }
 
     private boolean checkCredencials(String username, String password) {
