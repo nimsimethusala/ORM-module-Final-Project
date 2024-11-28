@@ -175,6 +175,7 @@ public class PaymentFormController {
 
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION, "New Payment is Saved...!").show();
+                loadAllPayments();
             }
         } catch (ParseException e) {
             throw new RuntimeException(e);

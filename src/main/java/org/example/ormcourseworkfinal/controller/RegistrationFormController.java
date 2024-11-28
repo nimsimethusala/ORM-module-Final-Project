@@ -139,6 +139,7 @@ public class RegistrationFormController {
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Registration is Successfully completed...!").show();
                 clearFields();
+                loadAllRegistration();
             }
         } catch (ParseException e) {
             e.printStackTrace();
