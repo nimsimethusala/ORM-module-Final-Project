@@ -91,7 +91,7 @@ public class StudentFormController {
         if (isDelete){
             new Alert(Alert.AlertType.CONFIRMATION, "Student is Deleted...!").show();
             clearFields();
-            tblStudent.refresh();
+            loadAllCustomer();
         }
     }
 
@@ -110,7 +110,7 @@ public class StudentFormController {
         if (isSaved){
             new Alert(Alert.AlertType.INFORMATION, "New Student is Saved...!").show();
             clearFields();
-            tblStudent.refresh();
+            loadAllCustomer();
         }
     }
 
@@ -129,7 +129,7 @@ public class StudentFormController {
         if (isUpdated) {
             new Alert(Alert.AlertType.INFORMATION, "Student is Updated...!").show();
             clearFields();
-            tblStudent.refresh();
+            loadAllCustomer();
         }
     }
 
