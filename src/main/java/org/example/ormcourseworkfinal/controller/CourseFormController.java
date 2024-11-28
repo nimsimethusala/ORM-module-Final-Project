@@ -58,7 +58,7 @@ public class CourseFormController {
     public void initialize() {
         generateNextCourseId();
         setCellValueFactory();
-        loadAllCustomer();
+        loadAllCourse();
     }
 
     @FXML
@@ -75,6 +75,7 @@ public class CourseFormController {
         if (isDelete){
             new Alert(Alert.AlertType.CONFIRMATION, "Course is Deleted...!").show();
             clearFields();
+            loadAllCourse();
         }
     }
 
@@ -91,6 +92,8 @@ public class CourseFormController {
 
         if (isSaved){
             new Alert(Alert.AlertType.INFORMATION, "New Course is Saved...!").show();
+            clearFields();
+            loadAllCourse();
         }
     }
 
@@ -108,6 +111,7 @@ public class CourseFormController {
         if (isUpdated){
             new Alert(Alert.AlertType.CONFIRMATION, "Course is Updated...!").show();
             clearFields();
+            loadAllCourse();
         }
     }
 
@@ -124,7 +128,7 @@ public class CourseFormController {
         colProgramFee.setCellValueFactory(new PropertyValueFactory<>("programFee"));
     }
 
-    private void loadAllCustomer(){
+    private void loadAllCourse(){
         ObservableList<CourseTm> obList = FXCollections.observableArrayList();
 
         try {
