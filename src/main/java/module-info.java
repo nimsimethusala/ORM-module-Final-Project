@@ -5,7 +5,7 @@ module org.example.ormcourseworkfinal {
     requires static lombok;
     requires jakarta.persistence;
     requires java.naming;
-
+    requires spring.security.crypto;
 
     //exports org.example.ormcourseworkfinal.controller;
     opens org.example.ormcourseworkfinal.entity to org.hibernate.orm.core;

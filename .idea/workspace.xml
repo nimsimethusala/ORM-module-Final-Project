@@ -4,23 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="update register form">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/tm/PaymentTm.java" afterDir="false" />
+    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="add validation for the project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/UserBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/UserBoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/AdminDashboardFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/UserFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/tm/UserTm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/util/CheckCredential.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/UserDashboardForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/UserForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e5ea846-846f-4940-ab8c-b83587f543b0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6e5ea846-846f-4940-ab8c-b83587f543b0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/PaymentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/PaymentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/RegistrationBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/StudentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/PaymentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/PaymentBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/RegistrationBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/StudentBoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/PaymentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/PaymentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/RegistrationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/PaymentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/RegistrationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/PaymentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/BOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/config/FactoryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/config/FactoryConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/UserDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/LoginPageControllerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/LoginPageControllerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/StudentFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/DashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/AdminDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,15 +76,16 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final/src/main/java/org/example/ormcourseworkfinal",
-    "last_opened_file_path": "C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final",
+    "last_opened_file_path": "C:/Users/Lenovo/Documents/ORM/ORM-Course-Work-Final/src/main/resources/org/example/ormcourseworkfinal",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.updates",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -84,12 +96,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Documents\ORM\ORM-Course-Work-Final\src\main\resources\org\example\ormcourseworkfinal" />
       <recent name="C:\Users\Lenovo\Documents\ORM\ORM-Course-Work-Final\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Documents\ORM\ORM-Course-Work-Final\src\main\resources\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.ormcourseworkfinal.dto" />
       <recent name="org.example.ormcourseworkfinal.dao" />
       <recent name="org.example.ormcourseworkfinal.bo" />
       <recent name="org.example.ormcourseworkfinal.tm" />
@@ -163,7 +177,7 @@
       <workItem from="1731933397776" duration="21505000" />
       <workItem from="1732199125755" duration="11110000" />
       <workItem from="1732324895462" duration="327000" />
-      <workItem from="1732353374955" duration="38303000" />
+      <workItem from="1732353374955" duration="101349000" />
     </task>
     <task id="LOCAL-00001" summary="student and course classes are fully implemented">
       <option name="closed" value="true" />
@@ -205,7 +219,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732368830174</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update payment form">
+      <option name="closed" value="true" />
+      <created>1732477377740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732477377740</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add validation for the project">
+      <option name="closed" value="true" />
+      <created>1732484743091</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732484743091</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +247,9 @@
     <MESSAGE value="implemente registration form" />
     <MESSAGE value="update course form, register form and payment form" />
     <MESSAGE value="update register form" />
-    <option name="LAST_COMMIT_MESSAGE" value="update register form" />
+    <MESSAGE value="update payment form" />
+    <MESSAGE value="add validation for the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add validation for the project" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

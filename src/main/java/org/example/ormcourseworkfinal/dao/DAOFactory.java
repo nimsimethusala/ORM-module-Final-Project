@@ -1,9 +1,6 @@
 package org.example.ormcourseworkfinal.dao;
 
-import org.example.ormcourseworkfinal.dao.impl.CourseDaoImpl;
-import org.example.ormcourseworkfinal.dao.impl.PaymentDaoImpl;
-import org.example.ormcourseworkfinal.dao.impl.RegistrationDaoImpl;
-import org.example.ormcourseworkfinal.dao.impl.StudentDaoImpl;
+import org.example.ormcourseworkfinal.dao.impl.*;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
@@ -16,7 +13,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        STUDENT,COURSE,PAYMENT,REGISTRATION
+        STUDENT,COURSE,PAYMENT,REGISTRATION,USER
     }
 
     public SuperDAO getDAO(DAOTypes types){
@@ -29,6 +26,8 @@ public class DAOFactory {
                 return new PaymentDaoImpl();
             case REGISTRATION:
                 return new RegistrationDaoImpl();
+            case USER:
+                return new UserDaoImpl();
             default:
                 return null;
         }

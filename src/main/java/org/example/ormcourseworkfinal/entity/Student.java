@@ -1,9 +1,6 @@
 package org.example.ormcourseworkfinal.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -24,6 +21,9 @@ public class Student {
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Registration> registrations;
+
+    @ManyToOne
+    private User user;
 
     public Student(String studentId, String name, int contact, String address, String email) {
         this.studentId = studentId;

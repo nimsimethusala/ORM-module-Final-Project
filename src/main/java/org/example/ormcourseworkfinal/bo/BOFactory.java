@@ -1,9 +1,6 @@
 package org.example.ormcourseworkfinal.bo;
 
-import org.example.ormcourseworkfinal.bo.impl.CourseBoImpl;
-import org.example.ormcourseworkfinal.bo.impl.PaymentBoImpl;
-import org.example.ormcourseworkfinal.bo.impl.RegistrationBoImpl;
-import org.example.ormcourseworkfinal.bo.impl.StudentBoImpl;
+import org.example.ormcourseworkfinal.bo.impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -14,7 +11,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        STUDENT,COURSE,PAYMENT,REGISTRATION
+        STUDENT,COURSE,PAYMENT,REGISTRATION,USER
     }
 
     //Object creation logic for BO objects
@@ -28,6 +25,8 @@ public class BOFactory {
                 return new PaymentBoImpl();
             case REGISTRATION:
                 return new RegistrationBoImpl();
+            case USER:
+                return new UserBoImpl();
             default:
                 return null;
         }

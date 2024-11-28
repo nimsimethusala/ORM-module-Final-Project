@@ -91,6 +91,7 @@ public class StudentFormController {
         if (isDelete){
             new Alert(Alert.AlertType.CONFIRMATION, "Student is Deleted...!").show();
             clearFields();
+            tblStudent.refresh();
         }
     }
 
@@ -108,6 +109,8 @@ public class StudentFormController {
 
         if (isSaved){
             new Alert(Alert.AlertType.INFORMATION, "New Student is Saved...!").show();
+            clearFields();
+            tblStudent.refresh();
         }
     }
 
@@ -125,6 +128,8 @@ public class StudentFormController {
 
         if (isUpdated) {
             new Alert(Alert.AlertType.INFORMATION, "Student is Updated...!").show();
+            clearFields();
+            tblStudent.refresh();
         }
     }
 
@@ -145,7 +150,6 @@ public class StudentFormController {
 
     private void loadAllCustomer(){
         ObservableList<StudentTm> obList = FXCollections.observableArrayList();
-
         try {
             List<StudentDTO> studentList = studentBO.getAllStudents();
             for (StudentDTO student : studentList){

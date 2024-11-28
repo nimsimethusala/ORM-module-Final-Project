@@ -1,9 +1,6 @@
 package org.example.ormcourseworkfinal.config;
 
-import org.example.ormcourseworkfinal.entity.Course;
-import org.example.ormcourseworkfinal.entity.Payment;
-import org.example.ormcourseworkfinal.entity.Registration;
-import org.example.ormcourseworkfinal.entity.Student;
+import org.example.ormcourseworkfinal.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -33,7 +30,7 @@ public class FactoryConfiguration {
 //        configuration.setProperties(properties);
 
         //add annotated class to configure
-        configuration.addAnnotatedClass(Student.class).addAnnotatedClass(Registration.class).addAnnotatedClass(Course.class).addAnnotatedClass(Payment.class);
+        configuration.addAnnotatedClass(Student.class).addAnnotatedClass(Registration.class).addAnnotatedClass(Course.class).addAnnotatedClass(Payment.class).addAnnotatedClass(User.class);
 
         //build session factory
         sessionFactory = configuration.buildSessionFactory();
