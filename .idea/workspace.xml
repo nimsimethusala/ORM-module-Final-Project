@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="update Login form">
+    <list default="true" id="38af838d-603d-4370-8e77-52414184c341" name="Changes" comment="update Registration and payment forms">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/UserBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/UserBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/bo/impl/UserBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/AdminDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/AdminDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/LoginPageControllerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/LoginPageControllerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/UserDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/controller/UserDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ormcourseworkfinal/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/AdminDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/AdminDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/UserDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/ormcourseworkfinal/UserDashboardForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +163,7 @@
       <workItem from="1731933397776" duration="21505000" />
       <workItem from="1732199125755" duration="11110000" />
       <workItem from="1732324895462" duration="327000" />
-      <workItem from="1732353374955" duration="115185000" />
+      <workItem from="1732353374955" duration="128452000" />
     </task>
     <task id="LOCAL-00001" summary="student and course classes are fully implemented">
       <option name="closed" value="true" />
@@ -234,7 +245,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732824632060</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update Student form">
+      <option name="closed" value="true" />
+      <created>1732825084707</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825084707</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update Course form">
+      <option name="closed" value="true" />
+      <created>1732825274978</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825274978</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update Registration and payment forms">
+      <option name="closed" value="true" />
+      <created>1732825582169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732825582169</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +286,10 @@
     <MESSAGE value="implement userForm" />
     <MESSAGE value="update navigations" />
     <MESSAGE value="update Login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Login form" />
+    <MESSAGE value="update Student form" />
+    <MESSAGE value="update Course form" />
+    <MESSAGE value="update Registration and payment forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Registration and payment forms" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

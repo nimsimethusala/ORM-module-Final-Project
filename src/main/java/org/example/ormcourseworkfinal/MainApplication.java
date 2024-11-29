@@ -11,7 +11,7 @@ import java.io.IOException;
 public class MainApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/org/example/ormcourseworkfinal/LoginPage.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);

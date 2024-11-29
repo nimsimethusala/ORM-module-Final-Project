@@ -38,62 +38,49 @@ public class LoginPageControllerForm {
     void btnLoginOnAction(ActionEvent event) {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
-        ArrayList<String> hashPasswords = userBO.getHashPassword(username);
-        boolean isMatch = userBO.checkUsername(username);
+
+        System.out.println(username);
+
+        UserDTO userDTO = null;
+        try {
+            userDTO = userBO.getUser(username);
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        }
+        System.out.println(userDTO.getPassword());
 
         try {
             if (username.equals("Admin")) {
-                if (checkPassword(password,hashPasswords)) {
-                    FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setTitle("Hello!");
+                if (CheckCredential.verifyPassword(password,userDTO.getPassword())) {
+                    AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
+
+                    Scene scene = new Scene(rootNode);
+
+                    Stage stage = (Stage) this.rootLogin.getScene().getWindow();
                     stage.setScene(scene);
-                    stage.show();
+                    stage.centerOnScreen();
+                    stage.setTitle("Dashboard Form");
                 }else {
                     new Alert(Alert.AlertType.INFORMATION, "Password is incorrect...!").show();
                 }
 
             }else {
-                if (isMatch){
-                    if (checkPassword(password,hashPasswords)) {
-                        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
-                        Scene scene = new Scene(fxmlLoader.load());
-                        Stage stage = new Stage();
-                        stage.setTitle("Hello!");
-                        stage.setScene(scene);
-                        stage.show();
-                    }else {
-                        new Alert(Alert.AlertType.INFORMATION, "Password is incorrect...!").show();
-                    }
+                if (CheckCredential.verifyPassword(password,userDTO.getPassword())) {
+
+                    AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/org/example/ormcourseworkfinal/UserDashboardForm.fxml"));
+                    Scene scene = new Scene(rootNode);
+
+                    Stage stage = (Stage) this.rootLogin.getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+                    stage.setTitle("Dashboard Form");
                 }else {
-                    new Alert(Alert.AlertType.INFORMATION, "Username is incorrect...!").show();
+                    new Alert(Alert.AlertType.INFORMATION, "Password is incorrect...!").show();
                 }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    private boolean checkPassword(String password, ArrayList<String> hashPasswords) {
-        return CheckCredential.checkPassword(password, hashPasswords);
-    }
-
-    private boolean checkCredencials(String username, String password) {
-        boolean isUsernameSimilar = userBO.checkUsername(username);
-        ArrayList<String> hashPasswords = userBO.getHashPassword(username);
-        boolean isPasswordSimilar = CheckCredential.checkPassword(password, hashPasswords);
-
-        if (isUsernameSimilar) {
-            if (isPasswordSimilar) {
-                return true;
-            }else{
-                new Alert(Alert.AlertType.INFORMATION, "Password duplicated...!").show();
-            }
-        }else {
-            new Alert(Alert.AlertType.INFORMATION, "Username duplicated...!").show();
-        }
-        return false;
     }
 
     boolean isPasswordVisible = false;

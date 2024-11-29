@@ -6,6 +6,7 @@ import org.example.ormcourseworkfinal.dao.UserDAO;
 import org.example.ormcourseworkfinal.dto.UserDTO;
 import org.example.ormcourseworkfinal.entity.User;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,5 +54,16 @@ public class UserBoImpl implements UserBO {
     @Override
     public boolean updateUser(UserDTO userDTO) {
         return userDAO.update(new User(userDTO.getUserId(), userDTO.getUsername(), userDTO.getPassword()));
+    }
+
+    @Override
+    public UserDTO getUser(String username) throws IOException {
+        User user = userDAO.getUser(username);
+        System.out.println(user);
+        return new UserDTO(
+                user.getUserId(),
+                user.getUsername(),
+                user.getPassword()
+        );
     }
 }

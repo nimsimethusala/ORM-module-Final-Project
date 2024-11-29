@@ -2,6 +2,7 @@ package org.example.ormcourseworkfinal.bo;
 
 import org.example.ormcourseworkfinal.dto.UserDTO;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,4 +21,6 @@ public interface UserBO extends SuperBO {
     ArrayList<String> getHashPassword(String username);
 
     boolean updateUser(UserDTO userDTO);
+
+    UserDTO getUser(String username) throws IOException;
 }

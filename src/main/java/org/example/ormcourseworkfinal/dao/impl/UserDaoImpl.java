@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -122,5 +123,56 @@ public class UserDaoImpl implements UserDAO {
         session.close();
 
         return passwords;
+    }
+
+    @Override
+    public User getUser(String username) throws IOException {
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = null;
+//        User user = null;
+//
+//        try {
+//            transaction = session.beginTransaction();
+//
+//            Query<User> query = session.createQuery("FROM User WHERE userId = :userId", User.class);
+//            query.setParameter("userId", username);
+//
+//            user = query.uniqueResult();
+//
+//            transaction.commit();
+//        } catch (Exception e) {
+//            if (transaction != null) {
+//                transaction.rollback();
+//            }
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//
+//        return user;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        User user = null;
+
+        try {
+            String hql = "FROM User WHERE username = :username";
+            Query<User> query = session.createQuery(hql, User.class);
+            query.setParameter("username", username);
+            user = query.uniqueResult();
+
+
+            if (user == null) {
+                throw new IOException("User not found: " + username);
+            }
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            throw e; // Re-throw the exception
+        } finally {
+            session.close();
+        }
+        return user;
     }
 }

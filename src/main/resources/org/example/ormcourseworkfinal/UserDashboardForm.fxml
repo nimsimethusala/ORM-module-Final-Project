@@ -47,6 +47,11 @@
                   <Image url="@../../../images/A_woman_holding_a_tray_of_food_with_a_chefs_hat_on_it___Premium_AI-generated_vector-removebg-preview.png" />
                </image>
             </ImageView>
+            <Button layoutX="875.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnLogout" prefHeight="43.0" prefWidth="162.0" style="-fx-background-radius: 15px; -fx-background-color: #fc0349;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
    </children>
 </AnchorPane>
