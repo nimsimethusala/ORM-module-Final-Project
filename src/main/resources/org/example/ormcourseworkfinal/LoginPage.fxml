@@ -34,7 +34,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <JFXButton layoutX="323.0" layoutY="224.0" onMousePressed="#btnPasswordOnAction" onMouseReleased="#btnPasswordOnAction" prefHeight="26.0" prefWidth="56.0" text="Button" />
+      <JFXButton layoutX="310.0" layoutY="224.0" onMousePressed="#btnPasswordOnAction" onMouseReleased="#btnPasswordOnAction" prefHeight="26.0" prefWidth="56.0" text="Show" />
       <PasswordField fx:id="txtPassword" layoutX="99.0" layoutY="223.0" prefHeight="26.0" prefWidth="209.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-border-color: #8395a7;" />
    </children>
 </AnchorPane>

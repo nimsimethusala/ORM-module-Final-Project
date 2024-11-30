@@ -88,9 +88,14 @@ public class UserFormController {
 
         if (isDelete){
             new Alert(Alert.AlertType.CONFIRMATION, "User is Deleted...!").show();
-            clearFields();
-            loadAllUsers();
+            refreshForm();
         }
+    }
+
+    private void refreshForm() {
+        clearFields();
+        loadAllUsers();
+        generateNextUserId();
     }
 
     private void clearFields() {
@@ -117,8 +122,7 @@ public class UserFormController {
 
                 if (isSaved){
                     new Alert(Alert.AlertType.INFORMATION, "New User is Saved...!").show();
-                    clearFields();
-                    loadAllUsers();
+                    refreshForm();
                 }
             }else{
                 new Alert(Alert.AlertType.INFORMATION, "Password duplicated...!").show();
@@ -147,8 +151,7 @@ public class UserFormController {
 
                 if (isSaved){
                     new Alert(Alert.AlertType.INFORMATION, "New User is Updated...!").show();
-                    clearFields();
-                    loadAllUsers();
+                    refreshForm();
                 }
             }else{
                 new Alert(Alert.AlertType.INFORMATION, "Password duplicated...!").show();

@@ -79,8 +79,7 @@ public class CourseFormController {
             boolean isDelete = courseBO.deleteCourse(courseId);
             if (isDelete){
                 new Alert(Alert.AlertType.CONFIRMATION, "Course is Deleted...!").show();
-                clearFields();
-                loadAllCourse();
+                refreshForm();
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -101,8 +100,7 @@ public class CourseFormController {
 
         if (isSaved){
             new Alert(Alert.AlertType.INFORMATION, "New Course is Saved...!").show();
-            clearFields();
-            loadAllCourse();
+            refreshForm();
         }
     }
 
@@ -119,9 +117,14 @@ public class CourseFormController {
 
         if (isUpdated){
             new Alert(Alert.AlertType.CONFIRMATION, "Course is Updated...!").show();
-            clearFields();
-            loadAllCourse();
+            refreshForm();
         }
+    }
+
+    private void refreshForm() {
+        clearFields();
+        loadAllCourse();
+        generateNextCourseId();
     }
 
     private void clearFields() {

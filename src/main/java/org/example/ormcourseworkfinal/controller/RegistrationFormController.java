@@ -79,17 +79,20 @@ public class RegistrationFormController {
     CourseBO courseBO = (CourseBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.COURSE);
 
     public void initialize() {
-        Date currentDate = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-        String formattedDate = formatter.format(currentDate);
-        lblDate.setText(formattedDate);
-
+        generateDate();
         generateNextRegistrationId();
         getAllStudentId();
         getAllCourseId();
         setCellValueFactory();
         loadAllRegistration();
 
+    }
+
+    private void generateDate() {
+        Date currentDate = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        String formattedDate = formatter.format(currentDate);
+        lblDate.setText(formattedDate);
     }
 
     private void getAllCourseId() {
@@ -140,6 +143,8 @@ public class RegistrationFormController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Registration is Successfully completed...!").show();
                 clearFields();
                 loadAllRegistration();
+                generateNextRegistrationId();
+                generateDate();
             }
         } catch (ParseException e) {
             e.printStackTrace();

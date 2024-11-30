@@ -90,9 +90,14 @@ public class StudentFormController {
 
         if (isDelete){
             new Alert(Alert.AlertType.CONFIRMATION, "Student is Deleted...!").show();
-            clearFields();
-            loadAllCustomer();
+            refreshForm();
         }
+    }
+
+    private void refreshForm() {
+        clearFields();
+        loadAllCustomer();
+        generateNextCustomerId();
     }
 
     @FXML
@@ -109,8 +114,7 @@ public class StudentFormController {
 
         if (isSaved){
             new Alert(Alert.AlertType.INFORMATION, "New Student is Saved...!").show();
-            clearFields();
-            loadAllCustomer();
+            refreshForm();
         }
     }
 
@@ -128,8 +132,7 @@ public class StudentFormController {
 
         if (isUpdated) {
             new Alert(Alert.AlertType.INFORMATION, "Student is Updated...!").show();
-            clearFields();
-            loadAllCustomer();
+            refreshForm();
         }
     }
 

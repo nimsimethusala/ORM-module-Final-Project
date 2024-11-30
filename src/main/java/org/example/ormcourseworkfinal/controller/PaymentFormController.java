@@ -160,7 +160,6 @@ public class PaymentFormController {
         String paymentId = lblPaymentId.getText();
         String registrationId = (String) cmbRegistrationId.getValue();
         double programFee = Double.parseDouble(lblProgramFee.getText());
-//        double balance = Double.parseDouble(lblBalance.getText());
         double newBalance = Double.parseDouble(lblNewBalance.getText());
         double payment = Double.parseDouble(txtPayment.getText());
         String date = lblDate.getText();
@@ -180,6 +179,7 @@ public class PaymentFormController {
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION, "New Payment is Saved...!").show();
                 loadAllPayments();
+                generateNextPaymentId();
             }
         } catch (ParseException e) {
             throw new RuntimeException(e);
