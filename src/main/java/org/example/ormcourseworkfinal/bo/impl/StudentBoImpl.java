@@ -20,7 +20,7 @@ public class StudentBoImpl implements StudentBO {
 
     @Override
     public boolean updateStudent(StudentDTO studentDTO) {
-        return studentDAO.save(new Student(studentDTO.getStudentId(), studentDTO.getName(), studentDTO.getContact(), studentDTO.getAddress(), studentDTO.getEmail()));
+        return studentDAO.update(new Student(studentDTO.getStudentId(), studentDTO.getName(), studentDTO.getContact(), studentDTO.getAddress(), studentDTO.getEmail()));
     }
 
     @Override

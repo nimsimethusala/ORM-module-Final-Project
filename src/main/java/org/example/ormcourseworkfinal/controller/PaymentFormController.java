@@ -4,9 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.PaymentBO;
 import org.example.ormcourseworkfinal.bo.RegistrationBO;
@@ -18,6 +21,7 @@ import org.example.ormcourseworkfinal.tm.PaymentTm;
 import org.example.ormcourseworkfinal.util.Regex;
 import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -246,5 +250,20 @@ public class PaymentFormController {
 
         double newBalance = paymentBO.getNewBalance(balance, amount);
         lblNewBalance.setText(String.valueOf(newBalance));
+    }
+
+    @FXML
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        try {
+            AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/org/example/ormcourseworkfinal/AdminDashboardForm.fxml"));
+            Scene scene = new Scene(rootNode);
+
+            Stage stage = (Stage) this.rootPayment.getScene().getWindow();
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setTitle("Main Form");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

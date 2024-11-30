@@ -4,11 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.ormcourseworkfinal.bo.BOFactory;
 import org.example.ormcourseworkfinal.bo.CourseBO;
 import org.example.ormcourseworkfinal.bo.StudentBO;
@@ -20,7 +23,9 @@ import org.example.ormcourseworkfinal.tm.StudentTm;
 import org.example.ormcourseworkfinal.util.Regex;
 import org.example.ormcourseworkfinal.util.TextFeildRegex;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 public class CourseFormController {
     @FXML
@@ -68,15 +73,19 @@ public class CourseFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-        String courseId = lblCourseId.getText();
+        try {
+            String courseId = lblCourseId.getText();
 
-        boolean isDelete = courseBO.deleteCourse(courseId);
-
-        if (isDelete){
-            new Alert(Alert.AlertType.CONFIRMATION, "Course is Deleted...!").show();
-            clearFields();
-            loadAllCourse();
+            boolean isDelete = courseBO.deleteCourse(courseId);
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Course is Deleted...!").show();
+                clearFields();
+                loadAllCourse();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+
     }
 
     @FXML

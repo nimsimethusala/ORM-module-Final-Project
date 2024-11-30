@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
 
@@ -22,5 +24,6 @@ public class Payment {
     private String status;
 
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Registration registration;
 }
